@@ -5,7 +5,8 @@ import bodyParser from 'koa-bodyparser';
 // mongoose : connect server and db
 import mongoose from 'mongoose';
 import api from './api';
-import createFakeData from './createFakeData';
+import jwtMiddleware from './lib/jwtMiddleware';
+// import createFakeData from './createFakeData';
 
 // process.env : node js 에서 환경변수 조회 
 const { PORT, MONGO_URI } = process.env;
@@ -23,7 +24,7 @@ const router = new Router();
 
 router.use('/api', api.routes());
 app.use(bodyParser());
-
+app.use(jwtMiddleware);
 app.use(router.routes()).use(router.allowedMethods());
 
 const port = PORT || 4000;

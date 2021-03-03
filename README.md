@@ -11,3 +11,8 @@
 2021.02.25
 ##### connect server with database (mongoDB)
 ##### create fake data by activating line 17 in src/main.js
+2021.03.03
+##### Add auth feature
+###### - register, login, logout
+###### - post delete and update - allowed only for the authentized user
+###### - get post with query (username or tags)
