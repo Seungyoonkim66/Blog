@@ -11,8 +11,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",
     "mongoose": "^5.11.18"
   },
